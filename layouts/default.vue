@@ -1,10 +1,10 @@
-<script lang="ts" setup></script>
+<script setup></script>
 
 <template>
   <div>
-    <header>123</header>
+    <header>default layout header</header>
     <slot />
-    <footer>456</footer>
+    <footer>default layout footer</footer>
   </div>
 </template>
 

@@ -1,11 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>
-    <AboutHeader />
-    Page: foo
-    <AboutFooter />
-  </div>
+  <div>Component: Home</div>
 </template>
 
 <style scoped></style>

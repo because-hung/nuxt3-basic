@@ -2,9 +2,7 @@
 
 <template>
   <div>
-    <AboutHeader />
-    Page: foo
-    <AboutFooter />
+    <button>click</button>
   </div>
 </template>
 
