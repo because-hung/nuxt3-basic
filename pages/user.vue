@@ -1,4 +1,12 @@
-<script setup></script>
+<script setup>
+definePageMeta({
+//   middleware: (to, from) => {
+//     console.log("user=>", { to, from });
+//   },
+  middleware: ["auth"]
+});
+
+</script>
 
 <template>
   <div>
