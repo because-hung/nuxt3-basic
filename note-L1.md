@@ -1,4 +1,4 @@
-## 筆記
+## 筆記 - L1 架構解析
 
 # 1. 如果需要使用 pages/ 新增多個頁面，就需要使用 <NuxtPage /> 當作網頁的進入點！ 如同 <router-view /> 一樣
 
@@ -15,4 +15,10 @@
 # 6. 在 server 端是沒有 document 和 window
 
 # 7. middleware 執行順序是 全域 > 具名.匿名
+
+# 8. nuxt3 是 node.js 的環境 
+
+# 9  使用 nuxt3 api 功能 需新增在名為 api 資料夾下才有用，亂取資料夾名字會沒有效果，檔案名為路由的路徑，
+
+# 10 server / middleware 只能攔截站內的 Request，對外發送的 Request 不行
 

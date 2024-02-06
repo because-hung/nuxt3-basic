@@ -10,6 +10,11 @@ const { $hello } = useNuxtApp()
 
 const date = ref(new Date())
 
+const fetchData = async () => {
+  const res = await fetch('/api/hello').then((res) => res.json())
+  console.log(res)
+}
+
 </script>
 
 <template>
@@ -24,6 +29,7 @@ const date = ref(new Date())
     <!-- stores -->
     <h3>count - {{ store.count }}</h3>
     <button @click="store.add">Add</button>
+    <button @click="fetchData">get api data</button>
     <!-- composables -->
     <!-- <h3>count - {{ count }}</h3>
     <button @click="addCount">Add</button> -->
