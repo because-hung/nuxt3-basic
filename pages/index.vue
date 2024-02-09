@@ -1,5 +1,31 @@
 <script setup>
 
+const { data } = await useFetch('/api/hello', {
+ onRequest({ request, options }) {
+   // 設置 request headers
+   options.headers = options.headers || {}
+   options.headers.authorization = `Bearer token`
+   console.log('options', options.headers.authorization)
+ },
+ onRequestError({ request, options, error }) {
+   // 處理 request 錯誤
+ },
+ onResponse({ request, response, options }) {
+   // 處理回傳資料
+   console.log('response', response._data)
+   return response._data;
+ },
+ onResponseError({ request, response, options }) {
+   // 處理 response 錯誤
+ },
+});
+
+// // useFetch 打 api
+// const { data } = await useFetch('/api/hello')
+
+// // useFetch 帶參數
+// const { data } = await useFetch('/api/hello', { query: { page: 1, list: 20 } })
+
 // composables
 // const { count, addCount } = useAddCount()
 
@@ -20,10 +46,17 @@ const fetchData = async () => {
 <template>
   <div>
     <h1>首頁</h1>
+    <h2>data - {{ data.data }}</h2>
     <ClientOnly>
       <h2>{{ $hello('wang') }}</h2>
     </ClientOnly>
     <NuxtLink to="/user">user</NuxtLink>
+    <br />
+    <NuxtLink to="/about">about</NuxtLink>
+    <br />
+    <NuxtLink to="/async-data">async-data</NuxtLink>
+    <br />
+    <NuxtLink to="/moreApiFetch">more-Api-Fetch</NuxtLink>
     <h3 v-timeformat="1707143141522"></h3>
     <v-date-picker v-model="date" />
     <!-- stores -->
