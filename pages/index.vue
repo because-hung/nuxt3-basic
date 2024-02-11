@@ -1,5 +1,13 @@
 <script setup>
 
+const route = useRoute();
+const router = useRouter();
+
+onMounted(() => {
+  console.log('route=>', route);
+  console.log('router=>', router);
+})
+
 const { data } = await useFetch('/api/hello', {
  onRequest({ request, options }) {
    // 設置 request headers
@@ -57,6 +65,11 @@ const fetchData = async () => {
     <NuxtLink to="/async-data">async-data</NuxtLink>
     <br />
     <NuxtLink to="/moreApiFetch">more-Api-Fetch</NuxtLink>
+    <br />
+    <h2>Nuxt-Link 章節</h2>
+    <NuxtLink to="/nuxtLinkPage">nuxtLinkPage</NuxtLink>  
+    <br />
+    <NuxtLink to="/nestedRoute">nestedRoute</NuxtLink>  
     <h3 v-timeformat="1707143141522"></h3>
     <v-date-picker v-model="date" />
     <!-- stores -->
