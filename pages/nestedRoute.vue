@@ -9,7 +9,7 @@
     <nuxt-link to="/nestedRoute/a">Nested A</nuxt-link>
     <nuxt-link to="/nestedRoute/b">Nested B</nuxt-link>
     <main>
-        <NuxtPage />
+      <NuxtPage />
     </main>
   </div>
 </template>

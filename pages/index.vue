@@ -58,6 +58,8 @@ const fetchData = async () => {
     <ClientOnly>
       <h2>{{ $hello('wang') }}</h2>
     </ClientOnly>
+    <NuxtLink to="/courses">courses</NuxtLink>
+    <br />
     <NuxtLink to="/user">user</NuxtLink>
     <br />
     <NuxtLink to="/about">about</NuxtLink>
